@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "gato.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
