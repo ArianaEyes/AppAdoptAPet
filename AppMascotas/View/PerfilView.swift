@@ -116,7 +116,7 @@ struct PerfilView: View {
                 FavoritosView()
             }
             .navigationDestination(isPresented: $irSolicitudes) {
-                SolicitudesView()
+                
             }        }
     }
 }
