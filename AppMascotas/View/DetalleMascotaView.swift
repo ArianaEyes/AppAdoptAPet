@@ -17,13 +17,10 @@ struct DetalleMascotaView: View {
 
             VStack(spacing: 0) {
 
-             
-
                 ZStack(alignment: .topTrailing) {
 
                     Image(mascota.imagen)
                         .resizable()
-                        .scaledToFill()
                         .frame(height: 380)
                         .frame(maxWidth: .infinity)
                         .clipped()

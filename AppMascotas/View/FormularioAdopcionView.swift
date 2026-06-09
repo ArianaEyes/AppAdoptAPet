@@ -65,8 +65,7 @@ struct FormularioAdopcionView: View {
             .padding()
         }
         .background(
-            Color("Background")
-        )
+            Color("Background"))
         .navigationTitle("Adopción")
     }
 }

@@ -15,7 +15,13 @@ final class HomeViewModel: ObservableObject {
 
     let categorias = [
         "Perros",
-        "Gatos"
+        "Gatos",
+        "Pajaros",
+        "Peces",
+        "Conejos",
+        "Roedores",
+        "Reptiles",
+        "Insectos"
     ]
     
     func iconoParaCategoria(_ categoria: String) -> String {
@@ -24,6 +30,19 @@ final class HomeViewModel: ObservableObject {
             return "dog"
         case "Gatos":
             return "cat"
+        case "Pajaros":
+            return "bird"
+        case "Peces":
+            return "fish"
+        case "Conejos":
+            return "hare"
+        case "Roedores":
+            return "cat"
+        case "Reptiles":
+            return "lizard"
+        case "Insectos":
+            return "ant"
+        
         default:
             return "pawprint"
         }

@@ -11,6 +11,7 @@ struct PerfilView: View {
     @AppStorage("modoOscuro") private var modoOscuro: Bool = false
     @State private var irLogin = false
     @State private var irFavoritos = false
+    @State private var irSolicitudes = false
     @State private var irPerfil = false
     
     var body: some View {
@@ -59,7 +60,7 @@ struct PerfilView: View {
                             PerfilOpcion(
                                 icono: "pawprint.fill",
                                 titulo: "Solicitudes de Adopción",
-                                accion: {}  // próximamente
+                                accion: {irSolicitudes = true}  // próximamente
                             )
 
                             PerfilOpcion(
@@ -114,7 +115,9 @@ struct PerfilView: View {
             .navigationDestination(isPresented: $irFavoritos) {
                 FavoritosView()
             }
-        }
+            .navigationDestination(isPresented: $irSolicitudes) {
+                SolicitudesView()
+            }        }
     }
 }
 

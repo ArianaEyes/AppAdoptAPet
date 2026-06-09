@@ -102,9 +102,9 @@ struct HomeView: View {
                                                 Image(systemName: vm.iconoParaCategoria(categoria))
                                                     .font(.system(size: 28))
 
-                                                Text(categoria)
-                                                    .font(.subheadline)
+                                                
                                             }
+                                            .frame(height: 60)
                                             .padding(.horizontal, 18)
                                             .padding(.vertical, 12)
                                             .background(
