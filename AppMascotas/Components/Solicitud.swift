@@ -10,7 +10,7 @@ import SwiftUI
 struct Solicitud: View {
     let nombre: String
     let mensaje: String
-    let mascota: "Firulais"
+    let mascota: String
     var body: some View {
 
         HStack(spacing: 15) {
@@ -55,6 +55,6 @@ struct Solicitud: View {
 }
 
 #Preview {
-    Solicitud(nombre: "Anthony", mensaje: "Solicita a \(mascota))
+    Solicitud(nombre: "Anthony", mensaje: "Solicita a ", mascota:"Viktor")
 }
 

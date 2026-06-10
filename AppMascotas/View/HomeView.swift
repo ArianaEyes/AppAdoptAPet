@@ -34,7 +34,7 @@ struct HomeView: View {
 
                         ZStack(alignment: .bottomLeading) {
 
-                            Image("bannerMascotas")
+                            Image("Image 2")
                                 .resizable()
                                 .scaledToFill()
                                 .frame(height: 220)
