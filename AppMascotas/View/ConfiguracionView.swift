@@ -8,16 +8,17 @@
 import SwiftUI
 
 struct ConfiguracionView: View {
+    @State var irLogin = false
     var body: some View {
         
-       
-            
+        
+        
         NavigationStack {
             
             VStack{
                 HStack{
                     
-                    Image(systemName: "gear.circle.fill")
+                    Image(systemName: "gearshape.fill")
                         .font(.system(size: 40))
                         .foregroundStyle(Color.principal)
                     Text("Configuraciones")
@@ -65,10 +66,19 @@ struct ConfiguracionView: View {
                     .listRowBackground(Color.white)
                     
                     Section {
-                        Button("Cerrar sesión") {
+                        Button {
                             // Logout
+                            irLogin = true
+                        }label:{
+                            HStack{
+                                Spacer().frame(width: 10)
+                                Text("Cerrar sesión")
+                                Spacer().frame(width: 200)
+                                Image(systemName: "rectangle.portrait.and.arrow.forward.fill")
+                            }
                         }
                         .foregroundStyle(Color.principal)
+                        
                     }
                 }
                 .scrollContentBackground(.hidden)
@@ -76,8 +86,13 @@ struct ConfiguracionView: View {
                 
                 
             }.background(Color.principal.opacity(0.2))
-        }
             
+                .navigationDestination(isPresented: $irLogin) {
+                    SplashView()
+                        .navigationBarBackButtonHidden(true)
+                }
+        }
+        
         
                    
     }
